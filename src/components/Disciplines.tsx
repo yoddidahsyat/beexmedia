@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 const items = [
   ["01 / DIRECTING", "Narrative Film & Short Drama", "Penulisan naskah, casting, directing, direct on-set production dengan tata cahaya bercerita dramatis."],
   ["02 / BROADCAST", "Multi-Cam Podcasts", "Transformasi talkshow konvensional menjadi pertunjukan visual sekelas Netflix dengan switching multi-kamera."],
@@ -32,7 +35,7 @@ export default function Disciplines() {
                   {k}
                 </span>
                 <span className="font-mono-code text-[14px] text-primary-container opacity-0 -translate-x-2 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0">
-                  ↗
+                  <FontAwesomeIcon icon={faArrowRight} className="h-3.5 w-3.5 -rotate-45" />
                 </span>
               </div>
               <h4 className="font-headline-sm text-headline-sm uppercase text-on-surface font-semibold transition-all duration-300 group-hover:text-primary group-hover:translate-x-1">

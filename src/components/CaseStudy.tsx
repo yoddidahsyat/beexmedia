@@ -31,7 +31,7 @@ export default function CaseStudy() {
               <Image
                 alt="Film Luruh screening and cast scene"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqaEXWGP4q4tXpk6AXw6KrMLheDlxhO_eWJFLvWiWfhDtugbymEJupdYHFjAaDnNcIfVkd3SUS1sd8ahI3dsa1wqVRuKggKSUVwcMK7hprfpZSJfdmufUJxZ7U-5RjlndTmo6i07AP74Ik4i2CCtw5sBLV_TWyvOZg31S1Fb8FrhjOpTzLobH-yUSUtGXl9Ovp7l5YoOSPr_WkHtw4GG2nWTWt6szLDB18XH4Cfe7Dozw_VLQQ-1kaouvtPoUdWzDU6g"
+                src="/images/case-study.png"
                 fill
                 sizes="(min-width: 1024px) 58vw, 100vw"
               />

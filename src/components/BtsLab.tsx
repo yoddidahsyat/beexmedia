@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const cards = [
   {
     alt: "How We Set Our Lights - Gaffer Narendra Satrio",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBgFASieXY_DI5fB1TYB6RQbEz2Dja3x3F1bI7yHZooqD3z4VgduqJsUVCji9n5lNi9ZuGdkjJ6AGhI88fcJ4MoaZsTJXo2i0NgHq4qnyLKFc7rl3Iumm6Pbbzgj0S9Kp5qoc2O65DRynpzhNh49IeajHzWoawNuebDx7Y6r4kRaeslF6Pqqs0QurXmQDtlH4yMNZkpjMmXwnZ_RsVgaJH6dPK42Fbu8q0Z_TfO81JOwtPXUVtXiUzYjsOYIkWkyiq6gg",
+    src: "/images/bts-lights.png",
     tag: "LIGHTING / GAFFER",
     credit: "GAFFER • NARENDRA SATRIO",
     title: "HOW WE SET OUR LIGHTS",
@@ -12,7 +14,7 @@ const cards = [
   },
   {
     alt: "Dynamic Mic Røde PodMic for studio noise reduction",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAtaQINllg3hr5XbcIRynKlT4NzdruruJb3xBTJJdDUnRbaaf1LljwvdCaRsmNkw4pyIpT6KFyhloyy0Rh4Y_SGRtJzu1PcxQaCXS7oTx-UxUWGYBhzgAZFWTk-eOdXlrMOKbbDhD4GiuRErMZz64jTuxiWqN7jLTxx5WrmwPPSm93tL-1gSnamYuL_F3mFIFdU2cxo7XZTWfUogAu1DW7Riimb4mWbfkU9YQJqErfAEKrbfYLmlsclzJTJDP-Vh3tLDA",
+    src: "/images/bts-mic.png",
     tag: "AUDIO SCIENCE",
     credit: "AUDIOMAN • WIDIHARTO Y.",
     title: "WEAPON OF CHOICE: DYNAMIC MIC",
@@ -21,7 +23,7 @@ const cards = [
   },
   {
     alt: "Multi-cam Setup and Camera Rigging",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBt2o06WEKXj5lsUCncdtCp-n2JtWhB76nBUFph0uYsO-1LP_OAFDp5LDf5f8hnWypHNIfHPd0kRWPjZ55zexRiZGCaYaS13wwckZMQRU_FKBOEfPCFvdCzSLwM4zF7DIjQeux_m8bw6WQYDHmiViT1T6HT2GuA-5oxm6p0ARxcDtDqX57wPVyzIB9Y8T0kSTalVwVgHcJ0gEKw8_qJh-CiT5JYbwazshulACTua7G66zssuRlJP19Oyc538nni71H7vA",
+    src: "/images/bts-rig.png",
     tag: "RIG & OPTICS",
     credit: "DOP • HILMY DAFFANURI",
     title: "CAMERA RIG & LIVE SYNC",
@@ -82,7 +84,7 @@ export default function BtsLab() {
                 <p className="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">{c.body}</p>
                 <div className="pt-1 font-mono-code text-[11px] uppercase tracking-wider text-outline flex items-center justify-between">
                   <span>{c.meta}</span>
-                  <span className="text-primary-container font-semibold">→</span>
+                  <FontAwesomeIcon icon={faArrowRight} className="h-3 w-3 text-primary-container" />
                 </div>
               </div>
             </div>

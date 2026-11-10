@@ -42,22 +42,34 @@ export default function Dispatch() {
               }}
             >
               <div className="flex flex-col gap-1">
-                <label className={labelCls}>Nama / Entitas / Brand</label>
-                <input className={inputCls} placeholder="Nama Anda atau Institusi" required type="text" />
+                <label htmlFor="brief-name" className={labelCls}>Nama / Entitas / Brand</label>
+                <input id="brief-name" name="name" autoComplete="name" className={inputCls} placeholder="Nama Anda atau Institusi" required type="text" />
               </div>
               <div className="flex flex-col gap-1">
-                <label className={labelCls}>Email Korespondensi</label>
-                <input className={inputCls} placeholder="producer@yourdomain.com" required type="email" />
+                <label htmlFor="brief-email" className={labelCls}>Email Korespondensi</label>
+                <input id="brief-email" name="email" autoComplete="email" className={inputCls} placeholder="producer@yourdomain.com" required type="email" />
               </div>
               <div className="flex flex-col gap-1">
-                <label className={labelCls}>Disiplin Produksi</label>
-                <select className="w-full bg-transparent border-b border-outline-variant/40 py-2 text-on-surface font-body-sm text-body-sm focus:outline-none rounded-none">
+                <label htmlFor="brief-discipline" className={labelCls}>Disiplin Produksi</label>
+                <select id="brief-discipline" name="discipline" className="w-full bg-transparent border-b border-outline-variant/40 py-2 text-on-surface font-body-sm text-body-sm focus:outline-none rounded-none">
                   <option className="bg-surface">Film Pendek / Narrative Cinema</option>
                   <option className="bg-surface">Multi-Cam Broadcast Podcast</option>
                   <option className="bg-surface">Commercial TVC &amp; Digital Campaign</option>
                   <option className="bg-surface">Post-Production &amp; Color Grading</option>
                   <option className="bg-surface">Workshop &amp; Mentorship Produksi</option>
                 </select>
+              </div>
+              <div className="flex flex-col gap-1">
+                <label htmlFor="brief-message" className={labelCls}>
+                  Pesan <span className="normal-case tracking-normal">(opsional)</span>
+                </label>
+                <textarea
+                  id="brief-message"
+                  name="message"
+                  rows={4}
+                  className={`${inputCls} resize-none`}
+                  placeholder="Ceritakan singkat tentang proyek, target tanggal, atau anggaran Anda"
+                />
               </div>
               <button
                 className="mt-space-md py-3 bg-primary-container text-on-primary-container font-label-md text-label-md uppercase tracking-[0.2em] font-semibold hover:bg-secondary hover:text-on-secondary transition-all shadow-[0_0_20px_rgba(255,94,30,0.3)] cursor-pointer"

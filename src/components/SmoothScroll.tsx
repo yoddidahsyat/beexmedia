@@ -2,10 +2,7 @@
 
 import { useEffect } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function SmoothScroll() {
   useEffect(() => {
@@ -17,7 +14,7 @@ export default function SmoothScroll() {
       smoothWheel: true,
     });
 
-    lenis.on("scroll", ScrollTrigger.update);
+    // Drive Lenis from GSAP's ticker so scrolling shares one animation loop
     const tick = (time: number) => lenis.raf(time * 1000);
     gsap.ticker.add(tick);
     gsap.ticker.lagSmoothing(0);

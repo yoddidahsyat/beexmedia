@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { animate } from "motion/react";
+import gsap from "gsap";
 
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&*+<>/";
 
@@ -29,7 +29,7 @@ function scramble(text: string, progress: number) {
 }
 
 /**
- * Scramble-to-reveal text animation driven by Motion's `animate`.
+ * Scramble-to-reveal text animation driven by GSAP.
  * The real text stays in the layout (invisible while animating) so the line
  * never changes size, and screen readers always read the final text.
  */
@@ -46,15 +46,17 @@ export default function ScrambleText({
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let last = 0;
+    const clock = { t: 0 };
 
-    // Run one linear clock for delay + duration; the first frame (inside the
+    // One linear clock covers delay + duration; the first frame (inside the
     // callback) already shows scrambled text, so the final text never flashes
     // during the delay.
-    const controls = animate(0, delay + duration, {
+    const tween = gsap.to(clock, {
+      t: delay + duration,
       duration: delay + duration,
-      ease: "linear",
-      onUpdate: (t) => {
-        const raw = Math.min(1, Math.max(0, (t - delay) / duration));
+      ease: "none",
+      onUpdate: () => {
+        const raw = Math.min(1, Math.max(0, (clock.t - delay) / duration));
         const p = 1 - (1 - raw) * (1 - raw); // ease-out
         const now = performance.now();
         if (now - last < 45 && raw < 1) return; // throttle flicker (~22fps)
@@ -64,7 +66,9 @@ export default function ScrambleText({
       onComplete: () => setDisplay(null),
     });
 
-    return () => controls.stop();
+    return () => {
+      tween.kill();
+    };
   }, [text, duration, delay]);
 
   // `textClassName` is applied to each text layer separately: effects like

@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Tilt from "./Tilt";
 import ScrambleText from "./ScrambleText";
 
@@ -49,7 +51,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-space-sm px-space-lg py-3 rounded-xs bg-primary-container text-on-primary-container font-label-md text-label-md uppercase tracking-[0.15em] hover:bg-secondary hover:text-on-secondary transition-all shadow-[0_0_24px_rgba(255,94,30,0.3)]"
                 href="#dispatch"
               >
-                <span className="material-symbols-outlined text-[18px]">arrow_outward</span>
+                <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4 -rotate-45" />
                 Send a Brief
               </a>
               <a
@@ -68,7 +70,7 @@ export default function Hero() {
               <Image
                 alt="BEEX Media lighting and multi-cam broadcast setup"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoYhzYBSV-RerZa78rZAp7nghfe3VN-8wjj20cZSNTr7fkdOmgMESxg-l7nW2OoG2RfIIIuzBIR2nSMRUh0H_jFS4rTBAKrBSEXpq8OxvPi_BXGs_VWTE5WtsYix-B575RtF5fqL_UQwYmEr5FzLSwKUDQt4cFVG1TpmJk_G869LWr-hfrFje4BZRsrbGpM68tTJT3zKRvZcimQpAtIMYtL9OtqChmKI1JasybeD4jLE6BbpMR8PODcin5Gch_QhpPEg"
+                src="/images/hero.png"
                 fill
                 priority
                 sizes="(min-width: 1024px) 40vw, 100vw"
