@@ -1,0 +1,61 @@
+import { InstagramIcon, VimeoIcon, YoutubeIcon } from "./SocialIcons";
+
+const social =
+  "flex items-center justify-center w-10 h-10 rounded-xs border border-outline-variant/40 text-on-surface-variant hover:text-primary hover:border-primary-container transition-colors";
+const mail = "font-mono-code text-[12px] text-on-surface hover:text-primary transition-colors";
+
+export default function Footer() {
+  return (
+    <footer className="w-full bg-surface-container-lowest relative z-10 pt-space-2xl pb-space-xl mt-space-2xl">
+      <div className="w-full px-margin-mobile lg:px-margin max-w-7xl mx-auto flex flex-col gap-space-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl">
+          <div className="flex flex-col gap-space-md">
+            <div className="flex items-center gap-space-xs">
+              <div className="w-2.5 h-2.5 bg-primary-container rounded-xs rotate-45" />
+              <span className="font-display-lg text-[22px] tracking-wider text-on-surface leading-none">BEEX MEDIA</span>
+            </div>
+            <p className="font-body-sm text-body-sm text-on-surface-variant font-light max-w-xs leading-relaxed">
+              Studio sinema independen, iklan komersial berfidelitas tinggi, dan kampanye digital yang merancang semesta naratif yang terasa nyata.
+            </p>
+            <span className="font-mono-code text-[11px] text-outline tracking-widest uppercase">DCI STANDARD 2.39:1</span>
+          </div>
+          <div className="flex flex-col gap-space-sm">
+            <span className="font-mono-code text-[11px] uppercase tracking-widest text-outline">SOUNDSTAGES</span>
+            <div className="flex flex-col gap-1">
+              <span className="font-mono-code text-[12px] text-on-surface font-medium uppercase">YOGYAKARTA COMPLEX</span>
+              <span className="font-body-sm text-body-sm text-on-surface-variant font-light">Condongcatur, Sleman, DIY</span>
+            </div>
+            <div className="flex flex-col gap-1 mt-space-xs">
+              <span className="font-mono-code text-[12px] text-on-surface font-medium uppercase">JAKARTA POST-LAB</span>
+              <span className="font-body-sm text-body-sm text-on-surface-variant font-light">Kemang Selatan, South Jakarta</span>
+            </div>
+          </div>
+          <div className="flex flex-col gap-space-sm">
+            <span className="font-mono-code text-[11px] uppercase tracking-widest text-outline">COMMUNICATIONS</span>
+            <a className={mail} href="#">production@beexmedia.studio</a>
+            <a className={mail} href="#">bookings@beexmedia.studio</a>
+            <span className="font-mono-code text-[11px] text-outline mt-space-xs uppercase">EST. 2021</span>
+          </div>
+          <div className="flex flex-col gap-space-sm">
+            <span className="font-mono-code text-[11px] uppercase tracking-widest text-outline">SOCIAL MEDIA</span>
+            <div className="flex items-center gap-space-sm">
+              <a className={social} href="#" aria-label="Instagram @beexmedia" title="Instagram • @beexmedia">
+                <InstagramIcon />
+              </a>
+              <a className={social} href="#" aria-label="Vimeo beex-cinema" title="Vimeo • beex-cinema">
+                <VimeoIcon />
+              </a>
+              <a className={social} href="#" aria-label="YouTube BEEX Mastercuts" title="YouTube • BEEX Mastercuts">
+                <YoutubeIcon />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-lg border-t border-outline-variant/20">
+          <span className="font-mono-code text-[11px] uppercase text-outline tracking-wider">© 2025 BEEX MEDIA ARCHIVE. ALL RIGHTS RESERVED.</span>
+          <span className="font-mono-code text-[11px] uppercase text-primary tracking-widest">CRAFTED FOR CINEMA &amp; DIGITAL CAMPAIGNS</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
